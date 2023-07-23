@@ -1,0 +1,21 @@
+<div class="parent">
+    <p class="selectedLabel" *ngIf="defaultState; else hoveredVal">Default State</p>
+    <ng-template #hoveredVal>
+        <p class="selectedLabel" *ngIf="showOption; else selectedVal">Dropdown Menu - open (HOVERING OVER '{{hoveredOption}}')</p>
+    </ng-template>
+    <ng-template #selectedVal>
+        <p class="selectedLabel">Dropdown Menu - {{inputValue}} Selected</p>
+    </ng-template>
+    <div class="dropdown">
+        <input type="text" id="myInput" [(ngModel)] = "inputValue"
+        (click)="displayOption()" [ngStyle]="{'color': placeholder===true ? 'grey': 'black'}" />
+        <div class="arrow"></div>
+    </div>
+    <div class="selectOption" *ngIf="showOption">
+        <ng-container *ngFor="let item of options; let i=index">
+        <div (click)="selectedValue(i)" class="optionLabel" [ngStyle]="{'color': item.value === 'Option 0' ? 'grey': null}" (mouseover)="hoveredvalue(i)">
+            {{item.label}} 
+        </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+.parent {
+    margin:30px;
+    position: relative;
+    display: inline-block;
+
+      .arrow {
+        position: absolute;
+        right: 0;
+        top: 58px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+      }
+      
+      .arrow:after {
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #007bff transparent transparent transparent;
+      }
+
+    .selectedLabel {
+        font-size: 13px;
+        font-family: sans-serif;
+        margin-left: 5px;
+        text-transform: uppercase;
+    }
+    #myInput {
+        height: 35px;
+        width:450px;
+        border-radius: 8px;
+        margin-left: 5px;
+        padding-left: 10px;
+        border:1px solid #f0f2f5;
+    }
+
+    .selectOption {
+        width:450px;
+        height: 185px; 
+        overflow: auto;
+        padding-left: 10px;
+        border-radius: 8px; 
+        margin-top: 10px;
+        margin-left: 5px;
+        border:1px solid #f0f2f5;
+    }
+    
+    .optionLabel {
+        height: 25px;
+    }
+
+    .optionLabel:hover {
+        background-color: #e6f6fc;
+    }
+
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+     background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(155, 155, 155, 0.5);
+      border-radius: 20px;
+      border: transparent;
+    }
+}
+    
+    
+
+
